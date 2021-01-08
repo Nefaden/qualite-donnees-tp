@@ -6,7 +6,7 @@ import numpy as np
 def read_exel(path, sheet , collones):
     xls = pd.ExcelFile(path)
     xls.sheet_names[sheet]
-    result = pd.read_excel(path, sheet_name=xls.sheet_names[sheet],  header=3, usecols=collones, engine='openpyxl')
+    result = pd.read_excel(path, sheet_name=xls.sheet_names[sheet], index_col=0, header=3, usecols=collones, engine='openpyxl')
     result = result
     print(result)
     return result
