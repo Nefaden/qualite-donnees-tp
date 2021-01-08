@@ -1,5 +1,7 @@
 import pandas as pd
 import openpyxl
+import matplotlib.pyplot as plt
+import numpy as np
 
 #climat = pd.read_csv("../data/Climat.xlsx")
 
@@ -13,3 +15,4 @@ def read_exel(path, sheet):
 
 if __name__ == '__main__':
    result = read_exel('../Data/Climat.xlsx', 0)
+   
