@@ -17,6 +17,7 @@ def excelToCsv(sheet):
 
 def getDataFrame(csv):
     df = pd.DataFrame(csv)
+<<<<<<< HEAD
     print(df.dtypes)
     getPlotFromDataFrame(df)
 
@@ -24,10 +25,20 @@ def getPlotFromDataFrame(df):
     df1 = pd.DataFrame(df, columns=['Jour','Température'])
     plot = df.plot(x ='Jour', y='Température', kind = 'line')
     print(plot)
+=======
+    print(df.head(10))
+
+##def getPlotFromDataFrame(df):
+
+>>>>>>> 24f32ab0c8d865c5ed2c33a47a870b5ad6c274b1
 
 if __name__ == '__main__':
    excelfile = read_exel('../Data/Climat.xlsx', 0)
    excelToCsv(excelfile)
+<<<<<<< HEAD
    csvfile = pd.read_csv('../Data/Climat 2.csv')
+=======
+   csvfile = pd.read_csv('../Data/Climat.csv')
+>>>>>>> 24f32ab0c8d865c5ed2c33a47a870b5ad6c274b1
    getDataFrame(csvfile)
    
