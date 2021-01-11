@@ -7,6 +7,7 @@ def read_excel(path, sheet , colonnes):
     xls = pd.ExcelFile(path)
     xls.sheet_names[sheet]
     result = pd.read_excel(path, sheet_name=xls.sheet_names[sheet], index_col=0, header=2, usecols=colonnes, engine='openpyxl')
+    result.head()
     getPlotFromDataFrame(result)
     return result
 
@@ -18,8 +19,6 @@ def excelToCsv(sheet):
 def getDataFrame(csv):
     df = pd.DataFrame(csv)
     print(df.head(10))
-
-##def getPlotFromDataFrame(df):
 
 def calcul_moyenne(dataframe):
     print(dataframe.describe(include="all"))
