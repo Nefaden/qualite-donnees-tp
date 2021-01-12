@@ -25,11 +25,11 @@ python3 main.py
 
 * Website: https://codewithnefaden.wordpress.com/
 * Twitter: [@YannDurand11](https://twitter.com/YannDurand11)
-* Github: [@nefaden](https://github.com/marouwanebah)
+* Github: [@nefaden](https://github.com/nefaden)
 
 👤 **Marouwane Bah**
 
-* Github: [@marouwanebah](https://github.com/nefaden)
+* Github: [@marouwanebah](https://github.com/marouwanebah)
 
 ## Show your support
 
