@@ -2,8 +2,8 @@ import pandas as pd
 import openpyxl
 import matplotlib.pyplot as plt
 import numpy as np
-from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
-#from graph import getPlotFromDataFrame
+from numpy import nanmean, isnan, nanstd, nanmin, nanmax
+from graph import getPlotFromDataFrame
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
@@ -11,7 +11,6 @@ def read_excel(path, sheet , colonnes):
     xls = pd.ExcelFile(path)
     xls.sheet_names[sheet]
     result = pd.read_excel(path, sheet_name=xls.sheet_names[sheet], index_col=0, header=2, usecols=colonnes, engine='openpyxl')
-    #getPlotFromDataFrame(result)
     return result
 
 def calcul_moyenne(dataframe):
@@ -36,9 +35,8 @@ def calcul_min_max_mois(dataframe):
 
 if __name__ == '__main__':
    excelfile = read_excel('Data/Climat.xlsx', 0, "C:O")
-   #csvfile = pd.read_csv('Data/Climat.csv')
-   csvfile = genfromtxt('Data/Climat.csv', delimiter=';', dtype=float, skip_header=True)
-   calcul_moyenne(csvfile)
-   calcul_ecart_type(csvfile)
-   calcul_min_max_mois(csvfile)
-   
+   csvfile = pd.read_csv('Data/Climat.csv')
+   calcul_moyenne(excelfile)
+   calcul_ecart_type(excelfile)
+   calcul_min_max_mois(excelfile)
+   #getPlotFromDataFrame(excelfile)
