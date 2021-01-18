@@ -3,7 +3,7 @@ import openpyxl
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
-from graph import getPlotFromDataFrame
+from graph_error import getPlotFromDataFrame
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
@@ -33,7 +33,8 @@ def calcul_min_max_annee(dataframe):
     print("Year Max : " + str(nanmax(year_climat)))
 
 if __name__ == '__main__':
-    climat = genfromtxt('Data/Climat.csv', delimiter=';', dtype=float, skip_header=True)
+    climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
+    np.nan_to_num(climat, nan=0, posinf=35, neginf=-10)
     calcul_moyenne(climat)
     calcul_ecart_type(climat)
     calcul_min_max_mois(climat)
