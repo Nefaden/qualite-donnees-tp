@@ -23,20 +23,23 @@ python3 main.py
 
 ## Question du TP
 
-* Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.<br/>
+* Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.
+
 Pour corriger le fichier des données, nous avons simplement remplacer les valeurs NaN par un chiffre random.
 Cependant, la méthode n'est pas optimisé car même les valeurs sensé être vide (comme le 31 du mois de février) sont tout de même remplacer par une seule valeur.
 
-* Les	données	corrigées	sont	elles	proches	des	valeurs	sans	erreur	?<br/>
+* Les	données	corrigées	sont	elles	proches	des	valeurs	sans	erreur	?
+
 Malgré la modification non optimiser, les résultats obtenus sont sensiblement identique. Il y a des écarts (max août à 48° par exemple) mais qui ne viennent pas des erreurs corrigés.
 
-* A	partir	de	données	opendata	du	second	fichier,	retrouver	le	type	de	climat<br/>
+* A	partir	de	données	opendata	du	second	fichier,	retrouver	le	type	de	climat
+
 Ces données proviennent de Finlande, où règne un climat froid, voir tempéré mais avec de grands écarts observable entre les période estivale et hivernale.
-  * reprendre	les	données	typiques	de	la	localisaon	proche		fournies	en	complément	,	comparer	les	écarts.<br/>
+  * reprendre	les	données	typiques	de	la	localisaon	proche		fournies	en	complément	,	comparer	les	écarts.
 
-  * Qu'en	concluez	vous	?<br/>
+  * Qu'en	concluez	vous	?
 
-  * De	quelle	la	capitale	européenne	avez	vous		eu	les	données	.<br/>
+  * De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
 
 ## Author
 
