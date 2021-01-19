@@ -13,9 +13,10 @@ def getPlotFromDataFrame(months, climat):
     month = 0
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)    
-    title = plt.title(f"Vue du mois : {months[month]}")
+    plt.figure(num='Température Climat avec erreur')
+    title = plt.title(f"Température du mois de {months[month]}")
     plt.xlabel('Jours')
-    plt.ylabel('Degrés')
+    plt.ylabel('Température')
     
     plt.axis([1, 31, nanmin(year_array)-5, nanmax(year_array)+5])
     plt.grid(True)

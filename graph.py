@@ -1,8 +1,11 @@
-import matplotlib.pyplot as plt
-import numpy as np
-from matplotlib.widgets import Button
-from numpy import isnan, nanmin, nanmax, searchsorted, arange, array, append
+import mplcursors
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.widgets as widgets
+from matplotlib.widgets import Button
+import numpy as np
+from numpy import isnan, nanmin, nanmax, searchsorted, arange, array, append
+from cursor import SnaptoCursor
 
 def getPlotFromDataFrame(months, climat):    
     year_array = array([])
@@ -13,9 +16,10 @@ def getPlotFromDataFrame(months, climat):
     month = 0
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)    
-    title = plt.title(f"Vue du mois : {months[month]}")
+    plt.figure(num='Température Climat sans erreur')
+    title = plt.title(f"Température du mois de {months[month]}")
     plt.xlabel('Jours')
-    plt.ylabel('Degrés')
+    plt.ylabel('Température')
     
     plt.axis([1, 31, nanmin(year_array)-5, nanmax(year_array)+5])
     plt.grid(True)
@@ -61,5 +65,9 @@ def getPlotFromDataFrame(months, climat):
     bnext.on_clicked(callback.next)
     bprev = Button(axprev, 'Previous')
     bprev.on_clicked(callback.prev)
+
+    # #cursor = Cursor(ax)
+    # cursor = SnaptoCursor(plot, plot.get_xdata, plot.get_ydata)
+    # cid =  plt.connect('motion_notify_event', cursor.mouse_move)
 
     plt.show()

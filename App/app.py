@@ -2,6 +2,7 @@ import pandas as pd
 import openpyxl
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
 from graph_error import getPlotFromDataFrame
 
@@ -34,7 +35,9 @@ def calcul_min_max_annee(dataframe):
 
 if __name__ == '__main__':
     climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
-    np.nan_to_num(climat, nan=0, posinf=35, neginf=-10)
+    rand = random.randint(-5, 30)
+    climat = np.nan_to_num(climat, nan=rand)
+    print(climat)
     calcul_moyenne(climat)
     calcul_ecart_type(climat)
     calcul_min_max_mois(climat)
