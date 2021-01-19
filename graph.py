@@ -5,7 +5,7 @@ import matplotlib.widgets as widgets
 from matplotlib.widgets import Button
 import numpy as np
 from numpy import isnan, nanmin, nanmax, searchsorted, arange, array, append
-from cursor import SnaptoCursor
+# from cursor import SnaptoCursor
 
 def getPlotFromDataFrame(months, climat):    
     year_array = array([])

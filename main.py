@@ -32,10 +32,16 @@ def calcul_min_max_annee(dataframe):
     print("Year Min : " + str(nanmin(year_climat)))
     print("Year Max : " + str(nanmax(year_climat)))
 
+def calcul_rolling_mean(dataframe):
+    df = pd.DataFrame(dataframe)
+    roll = df.rolling(2, win_type='triang').sum()
+    print("Rolling mean : " + roll)
+
 if __name__ == '__main__':
     climat = genfromtxt('Data/Climat.csv', delimiter=';', dtype=float, skip_header=True)
     calcul_moyenne(climat)
     calcul_ecart_type(climat)
     calcul_min_max_mois(climat)
     calcul_min_max_annee(climat)
+    calcul_rolling_mean(climat)
     getPlotFromDataFrame(months, climat)
