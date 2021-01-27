@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
 from graph import getPlotFromDataFrame
+from test import getPlotFromDataFrameTest
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
@@ -43,5 +44,6 @@ if __name__ == '__main__':
     calcul_ecart_type(climat)
     calcul_min_max_mois(climat)
     calcul_min_max_annee(climat)
-    calcul_rolling_mean(climat)
+    # calcul_rolling_mean(climat)
     getPlotFromDataFrame(months, climat)
+    # getPlotFromDataFrameTest(months, climat)
