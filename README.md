@@ -30,9 +30,12 @@ Pour corriger le fichier des données SI-erreur
 Nous avons en premier déterminé les données erronées  telles que
 - Les valeurs vide (NaN)
 - Les valeurs incohérentes (valeur hexadécimale comme température)
-et pour les taiter nous trouvées deux solutions
+
+pour le traitement nous avons  trouvé deux solutions
+
 - oublier les valeurs
 - Deviner à partir d'autres variables
+
 Nous avons choisi comme solution de deviner les variables manquantes ou erronées en fessant la moyenne des valeurs existantes pour chaque mois 
 
 * Les	données	corrigées	sont	elles	proches	des	valeurs	sans	erreur	?
