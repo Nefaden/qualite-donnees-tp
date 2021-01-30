@@ -4,7 +4,7 @@ from matplotlib.widgets import Button
 from numpy import isnan, nanmin, nanmax, searchsorted, arange, array, append
 import pandas as pd
 
-def getPlotFromDataFrame(months, climat):    
+def getPlotFromDataFrame(months, climat):
     year_array = array([])
     for i, month in enumerate(months, start=0):
         year_array = append(year_array, climat[:, i])

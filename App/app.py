@@ -5,6 +5,7 @@ import numpy as np
 import random
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
 from graph_error import getPlotFromDataFrame
+import math
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
@@ -33,11 +34,17 @@ def calcul_min_max_annee(dataframe):
     print("Year Min : " + str(nanmin(year_climat)))
     print("Year Max : " + str(nanmax(year_climat)))
 
+def clean_data(dataframe):
+    avg_month = nanmean(dataframe, axis=0)
+    for i, avg_month in enumerate(avg_month, start=0):
+        for j in range(len(dataframe)):
+                if math.isnan(dataframe[j][i]):
+                    dataframe[j][i] = round(avg_month)
+    print(dataframe)
+
 if __name__ == '__main__':
     climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
-    rand = random.randint(-5, 30)
-    climat = np.nan_to_num(climat, nan=rand)
-    print(climat)
+    clean_data(climat)
     calcul_moyenne(climat)
     calcul_ecart_type(climat)
     calcul_min_max_mois(climat)
