@@ -24,9 +24,18 @@ python3 main.py
 ## Question du TP
 
 * Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.
-
+/*
 Pour corriger le fichier des données, nous avons simplement remplacer les valeurs NaN par un chiffre random.
 Cependant, la méthode n'est pas optimisé car même les valeurs sensé être vide (comme le 31 du mois de février) sont tout de même remplacer par une seule valeur.
+*/
+Pour corriger le fichier des données SI-erreur
+Nous avons en premier déterminé les données erronées  telles que
+- Les valeurs vide (NaN)
+- Les valeurs incohérentes (valeur hexadécimale comme température)
+et pour les taiter nous trouvées deux solutions
+1 - oublier les valeurs
+2 - Deviner à partir d'autres variables
+Nous avons choisi comme solution de deviner les variables manquantes ou erronées en fessant la moyenne des valeurs existantes pour chaque mois 
 
 * Les	données	corrigées	sont	elles	proches	des	valeurs	sans	erreur	?
 
