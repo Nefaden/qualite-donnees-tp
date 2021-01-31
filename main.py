@@ -4,35 +4,33 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
 from graph import getPlotFromDataFrame
-from test import getPlotFromDataFrameTest
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+mean = []
+std = []
+minli = []
+maxli = []
+minyear = []
+maxyear = []
 
-def calcul_moyenne(dataframe):
-    avg_month = nanmean(dataframe, axis=0)
-    print("\nMoyenne par mois :\n")
-    for i, avg_month in enumerate(avg_month, start=0):
-        print(months[i] + " : " + str(avg_month))
-
-def calcul_ecart_type(dataframe):
-    std_month = nanstd(dataframe, axis=0)
-    print("\nÉcart-type par mois :\n")
-    for i, std_month in enumerate(std_month, start=0):
-        print(months[i] + " : " + str(std_month))
-
-def calcul_min_max_mois(dataframe):
-    print("\nMin & max par mois :\n")
+def statistics(dataframe):
     for i, month in enumerate(months, start=0):
-        print("\n{}".format(month))
-        print("Min : " + str(nanmin(dataframe[:, i])))
-        print("Max : " + str(nanmax(dataframe[:, i])))
-
-def calcul_min_max_annee(dataframe):
+        print("\n\nStats du mois de " + months[i] + ":\n")
+        print("moyenne du mois de " + months[i] + " : " + str(nanmean(dataframe[:, i])))
+        print("Écart-type du mois de " + months[i] + " : " + str(nanstd(dataframe[:, i])))
+        print("Min du mois de " + months[i] + " : " + str(nanmin(dataframe[:, i])))
+        print("Max du mois de " + months[i] + " : " + str(nanmax(dataframe[:, i])))
+        mean.append(nanmean(dataframe[:, i]))
+        std.append(nanstd(dataframe[:, i]))
+        minli.append(nanmin(dataframe[:, i]))
+        maxli.append(nanmax(dataframe[:, i]))
     year_climat = dataframe[~isnan(dataframe)]
+    minyear.append(nanmin(year_climat))
+    maxyear.append(nanmax(year_climat))
     print('\n')
-    print("Year Min : " + str(nanmin(year_climat)))
-    print("Year Max : " + str(nanmax(year_climat)))
-
+    print("Température minimale de l'année : " + str(minyear[0]))
+    print("Température maximale de l'année : " + str(maxyear[0]))
+    
 def calcul_rolling_mean(dataframe):
     df = pd.DataFrame(dataframe)
     roll = df.rolling(2, win_type='triang').sum()
@@ -40,10 +38,7 @@ def calcul_rolling_mean(dataframe):
 
 if __name__ == '__main__':
     climat = genfromtxt('Data/Climat.csv', delimiter=';', dtype=float, skip_header=True)
-    calcul_moyenne(climat)
-    calcul_ecart_type(climat)
-    calcul_min_max_mois(climat)
-    calcul_min_max_annee(climat)
+    statistics(climat)
     # calcul_rolling_mean(climat)
-    getPlotFromDataFrame(months, climat)
-    # getPlotFromDataFrameTest(months, climat)
+    getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxyear)
+    
