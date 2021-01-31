@@ -31,16 +31,16 @@ Nous avons en premier déterminé les données erronées  telles que
 - Les valeurs vide (NaN)
 - Les valeurs incohérentes (valeur hexadécimale comme température)
 
-pour le traitement nous avons  trouvé deux solutions
+pour le traitement nous avons trouvé deux solutions
 
 - oublier les valeurs
 - Deviner à partir d'autres variables
 
-Nous avons choisi comme solution de deviner les variables manquantes ou erronées en fessant la moyenne des valeurs existantes pour chaque mois 
+Nous avons choisi comme solution de deviner les variables manquantes ou erronées en faisant la moyenne des valeurs existantes pour chaque mois 
 
 * Les	données	corrigées	sont	elles	proches	des	valeurs	sans	erreur	?
 
-Malgré la modification non optimiser, les résultats obtenus sont sensiblement identique. Il y a des écarts (max août à 48° par exemple) mais qui ne viennent pas des erreurs corrigés.
+Les résultats obtenus sont sensiblement identique. Il y a des écarts (max août à 48° par exemple) mais qui ne viennent pas des erreurs corrigées.
 
 * A	partir	de	données	opendata	du	second	fichier,	retrouver	le	type	de	climat
 
