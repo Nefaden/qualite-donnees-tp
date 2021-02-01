@@ -70,9 +70,7 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
             elif self.ind == 11:
                 self.ind += 1
                 title.set_text(f"Température sur l'année \n ")
-                suptitle = plt.suptitle("\n\nMoyenne: " + str(round(mean[self.ind], 2)) + ", écart-type: " + str(
-                    round(std[self.ind], 2)) + " min: " + str(round(minli[self.ind], 2)) + " max: " + str(
-                    round(maxli[self.ind], 2)), fontsize=10)
+                suptitle = plt.suptitle("\n\nmin: " + str(minyear[0]) + " max: " + str(maxyear[0]), fontsize=10)
                 x = [x for x in arange(365) if x % 30 == 0]
                 ax.set_xlim(right=365)
                 ax.set_xticks(x)

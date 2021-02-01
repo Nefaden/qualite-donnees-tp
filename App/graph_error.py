@@ -38,7 +38,9 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)
     title = plt.title(f"Température du mois de {months[month]} \n")    
-    suptitle= plt.suptitle("\n\nMoyenne: " + str(mean[month]) + ", écart-type: " + str(std[month]) + " min: " + str(minli[month]) + " max: " + str(maxli[month]), fontsize=10)
+    suptitle = plt.suptitle("\n\nMoyenne: " + str(round(mean[month], 2)) + ", écart-type: " + str(
+        round(std[month], 2)) + " min: " + str(round(minli[month], 2)) + " max: " + str(
+        round(maxli[month], 2)), fontsize=10)
     plt.xlabel('Jours')
     plt.ylabel('Température')
     
@@ -56,7 +58,9 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
             if self.ind < 11:
                 self.ind += 1
                 title.set_text(f"Température du mois de {months[self.ind]} \n ")
-                suptitle = plt.suptitle("\n\nMoyenne: " + str(mean[self.ind]) + ", écart-type: " + str(std[self.ind]) + " min: " + str(minli[self.ind]) + " max: " + str(maxli[self.ind]), fontsize=10)
+                suptitle = plt.suptitle("\n\nMoyenne: " + str(round(mean[self.ind], 2)) + ", écart-type: " + str(
+                    round(std[self.ind], 2)) + " min: " + str(round(minli[self.ind], 2)) + " max: " + str(
+                    round(maxli[self.ind], 2)), fontsize=10)
                 plot.set_ydata(climat[:, self.ind])
                 self.cursor.x = arange(len(climat[:, self.ind]))
                 self.cursor.y = climat[:, self.ind]
@@ -79,7 +83,9 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
             if self.ind > 0:
                 self.ind -= 1
                 title.set_text(f"Température du mois de {months[self.ind]} \n ")
-                suptitle = plt.suptitle("\n\nMoyenne: " + str(mean[self.ind]) + ", écart-type: " + str(std[self.ind]) + " min: " + str(minli[self.ind]) + " max: " + str(maxli[self.ind]), fontsize=10)
+                suptitle = plt.suptitle("\n\nMoyenne: " + str(round(mean[self.ind], 2)) + ", écart-type: " + str(
+                    round(std[self.ind], 2)) + " min: " + str(round(minli[self.ind], 2)) + " max: " + str(
+                    round(maxli[self.ind], 2)), fontsize=10)
                 plot.set_ydata(climat[:, self.ind])
                 self.cursor.x = arange(len(climat[:, self.ind]))
                 self.cursor.y = climat[:, self.ind]
