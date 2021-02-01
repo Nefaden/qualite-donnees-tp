@@ -34,7 +34,7 @@ Les premières questions, celles sur le calcul de statistiques et affichage des 
 
 Exemple de courbe : 
 
-![screenshot](/Data/screenshotsscreenshot.png)
+![screenshot](/Data/screenshots/screenshot.png)
 ### Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.
 
 Pour corriger le fichier des données SI-erreur,
