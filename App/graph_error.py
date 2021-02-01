@@ -20,7 +20,7 @@ class Cursor(object):
         x, y = event.xdata, event.ydata
         indx = searchsorted(self.x, [x])[0]
         x = self.x[indx]
-        y = self.y[indx]
+        y = self.y[indx-1]
         self.ly.set_xdata(x)
         self.marker.set_data([x],[y])
         self.txt.set_text(f'jour {x}, {y}°C')

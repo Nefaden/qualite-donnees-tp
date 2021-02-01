@@ -5,6 +5,7 @@ import matplotlib.widgets as widgets
 from matplotlib.widgets import Button
 import numpy as np
 from numpy import genfromtxt, isnan, nanstd, nanmean, nanmin, nanmax, searchsorted, arange, array, append
+# from integral import calcul_integrale
 
 
 class Cursor(object):
@@ -28,7 +29,6 @@ class Cursor(object):
         self.txt.set_color("crimson")
         self.txt.set_position((x + 1, y + 1))
         self.ax.figure.canvas.draw()
-
 
 def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxyear):
     year_array = array([])
@@ -110,5 +110,7 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
     bnext.on_clicked(callback.next)
     bprev = Button(axprev, 'Previous')
     bprev.on_clicked(callback.prev)
+
+    # calcul_integrale(y)
 
     plt.show()
