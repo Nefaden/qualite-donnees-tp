@@ -25,7 +25,6 @@ python3 main.py
 
 * Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.
 
-
 Pour corriger le fichier des données SI-erreur
 Nous avons en premier déterminé les données erronées  telles que
 - Les valeurs vide (NaN)

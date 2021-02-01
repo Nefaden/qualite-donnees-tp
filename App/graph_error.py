@@ -5,6 +5,7 @@ import matplotlib.widgets as widgets
 from matplotlib.widgets import Button
 import numpy as np
 from numpy import genfromtxt, isnan, nanstd, nanmean, nanmin, nanmax, searchsorted, arange, array, append
+
 class Cursor(object):
     def __init__(self, ax, x, y):
         self.ax = ax
@@ -102,9 +103,5 @@ def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxye
     bnext.on_clicked(callback.next)
     bprev = Button(axprev, 'Previous')
     bprev.on_clicked(callback.prev)
-
-    # #cursor = Cursor(ax)
-    # cursor = SnaptoCursor(plot, plot.get_xdata, plot.get_ydata)
-    # cid =  plt.connect('motion_notify_event', cursor.mouse_move)
 
     plt.show()

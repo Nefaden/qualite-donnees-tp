@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
 from graph_error import getPlotFromDataFrame
+import math
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 mean = []
@@ -30,6 +31,14 @@ def statistics(dataframe):
     print('\n')
     print("Température minimale de l'année : " + str(minyear[0]))
     print("Température maximale de l'année : " + str(maxyear[0]))
+
+def clean_data(dataframe):
+    avg_month = nanmean(dataframe, axis=0)
+    for i, avg_month in enumerate(avg_month, start=0):
+        for j in range(len(dataframe)):
+                if math.isnan(dataframe[j][i]):
+                    dataframe[j][i] = round(avg_month)
+    print(dataframe)
     
 def calcul_rolling_mean(dataframe):
     df = pd.DataFrame(dataframe)
@@ -39,6 +48,7 @@ def calcul_rolling_mean(dataframe):
 if __name__ == '__main__':
     climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
     statistics(climat)
+    clean_data(climat)
     # calcul_rolling_mean(climat)
     getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxyear)
     
