@@ -31,6 +31,10 @@ python3 App/app.py
 ## Question du TP
 
 Les premières questions, celles sur le calcul de statistiques et affichage des données via des courbes et un cursor mobile sont inclus dans les fichiers main.py et graph.py situer à la racine.
+
+Exemple de courbe : 
+
+![screenshot](/Data/screenshotsscreenshot.png)
 ### Recommencez	avec	le	jeu	SI-erreur	après	avoir	corrigé	les	valeurs	en	erreur.	Précisez	vos	méthodes.
 
 Pour corriger le fichier des données SI-erreur,
