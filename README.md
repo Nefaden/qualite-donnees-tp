@@ -47,6 +47,12 @@ Les résultats obtenus sont sensiblement identique. Il y a des écarts (max aoû
 Ces données proviennent de Finlande, où règne un climat froid, voir tempéré mais avec de grands écarts observable entre les période estivale et hivernale.
   * reprendre	les	données	typiques	de	la	localisaon	proche		fournies	en	complément	,	comparer	les	écarts.
 
+L'objectif est d'extraire les données d'une capitale européenne, effectuer le traitement comme pour les données que l'ont possède et y opérer un ratio sur chacune des données pour vérifier la corrélation. 
+* De 0 à 0,5, les données ne sont pas corrélé,
+* De 0,5 à 0,8, les données commencent à se ressembler
+* de 0,8 à 0,9, les données sont cohérente et corrélé, 
+* de 0,9 à 1 les données sont identiques.
+
   * Qu'en	concluez	vous	?
 
   * De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
