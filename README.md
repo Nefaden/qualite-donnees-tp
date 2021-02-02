@@ -76,7 +76,7 @@ Il serait aussi envisageable d'effectuer la différence entre les valeurs lue à
 
 ### Qu'en	concluez	vous	?
 
-
+Nous en concluons que les données de Savukosi kirkonkyla ne correspondent pas aux données que nous possèdons, il y a trop de différence visible sur la superposition des courbes ainsi que sur les coefficients.
 ### De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
 
 L'objectif est d'extraire les données d'une ville européenne, effectuer le traitement comme pour les données que l'ont possède et y opérer un ratio sur chacune des données pour vérifier la corrélation. 
@@ -108,6 +108,8 @@ Lors de la création du fichier, nous avons remarqué des données incohérente 
 ### Qu'en	concluez	vous	?
 
 D'après le graphique généré, il semblerait que les températures de Moscou de 2018 ne correspondent absoluement pas à nos données.
+Il faudrait donc réitérer le processus avec d'autres données.
+
 ![result](/Data/screenshots/result_compared.png)
 
 ## Author
