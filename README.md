@@ -70,13 +70,23 @@ Il serait aussi envisageable d'effectuer la différence entre les valeurs lue à
 #### Méthode
 
 Afin d'estimer d'où proviennent les données, nous avons utilisé deux sites :
-* https://nomadlist.com/
-* https://www.infoclimat.fr/
+* https://nomadlist.com/climat-finder
+* Recherches filtrées : https://bit.ly/3apRmoL 
+* https://www.kaggle.com/sudalairajkumar/daily-temperature-of-major-cities 
 
 Nous avons d'abord comparer visuellement les moyennes de températures avec des villes de régions du monde cohérente avec celles que nous possèdons. Via le site nomadlist nous avons pu trouver une ville qui correspond plus ou moins à nos données, en se basant sur une recherche à partir des valeur maximale et minimale sur un mois car à l'année, les écartes étaient trop grand et ne permettait pas un filtre optimisé. 
 
 Le second site nous a permis d'obtenir les données sous format csv et donc permettre la comparaison expliciter plus haut.
 ### Qu'en	concluez	vous	?
+
+Actuellement nous pensons qu'il s'agit d'une de ces villes parmis :
+* Moscou
+* Yekaterinburg
+* Izhevsk
+
+![moscow](/Data/screenshots/moscow.png)
+![yekaterinburg](/Data/screenshots/yekaterinburg.png)
+![izhevsk](/Data/screenshots/izhevsk.png)
 
 ### De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
 
