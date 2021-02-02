@@ -83,7 +83,7 @@ Actuellement nous pensons qu'il s'agit d'une de ces villes parmis :
 * Moscou
 ![moscow](/Data/screenshots/moscow.png)
 * Yekaterinburg
-![yekaterinburg](/Data/screenshots/Yekaterinburg.png)
+![yekaterinburg](/Data/screenshots/yekaterinburg.png)
 * Izhevsk
 ![izhevsk](/Data/screenshots/izhevsk.png)
 
