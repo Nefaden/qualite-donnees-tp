@@ -38,10 +38,8 @@ def clean_data(dataframe):
         for j in range(len(dataframe)):
                 if math.isnan(dataframe[j][i]):
                     dataframe[j][i] = round(avg_month)
-    print(dataframe)
-    return dataframe
+    np.savetxt("../Data/Climat_cleaned.csv", dataframe, delimiter=";")
 
-    
 def calcul_rolling_mean(dataframe):
     df = pd.DataFrame(dataframe)
     roll = df.rolling(2, win_type='triang').sum()
@@ -50,7 +48,6 @@ def calcul_rolling_mean(dataframe):
 if __name__ == '__main__':
     climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
     statistics(climat)
-    # clean_data(climat)
     cleaned_climat = clean_data(climat)
     # calcul_rolling_mean(climat)
     get_plot_from_dataframe(months, cleaned_climat, mean, std, minli, maxli, minyear, maxyear)

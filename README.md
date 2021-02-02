@@ -105,6 +105,11 @@ Nous avons donc créer un nouveau fichier csv à partir du csv de kaggle pour n'
 
 Lors de la création du fichier, nous avons remarqué des données incohérente voir abérrante. Il semblerait que le fichier kaggle nous affiches des données en Fahrenheit, nous avons donc du créer une fonction pour les convertir en celsius.
 
+### Qu'en	concluez	vous	?
+
+D'après le graphique généré, il semblerait que les températures de Moscou de 2018 ne correspondent absoluement pas à nos données.
+![result](/Data/screenshots/result_compared.png)
+
 ## Author
 
 👤 **Yann Durand**
