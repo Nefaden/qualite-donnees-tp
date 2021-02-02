@@ -3,7 +3,7 @@ import openpyxl
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import genfromtxt, nanmean, isnan, nanstd, nanmin, nanmax
-from graph_error import getPlotFromDataFrame
+from graph_error import get_plot_from_dataframe
 import math
 
 months = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
@@ -39,6 +39,8 @@ def clean_data(dataframe):
                 if math.isnan(dataframe[j][i]):
                     dataframe[j][i] = round(avg_month)
     print(dataframe)
+    return dataframe
+
     
 def calcul_rolling_mean(dataframe):
     df = pd.DataFrame(dataframe)
@@ -48,7 +50,8 @@ def calcul_rolling_mean(dataframe):
 if __name__ == '__main__':
     climat = genfromtxt('../Data/Climat-erreur.csv', delimiter=';', dtype=float, skip_header=True)
     statistics(climat)
-    clean_data(climat)
+    # clean_data(climat)
+    cleaned_climat = clean_data(climat)
     # calcul_rolling_mean(climat)
-    getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxyear)
+    get_plot_from_dataframe(months, cleaned_climat, mean, std, minli, maxli, minyear, maxyear)
     

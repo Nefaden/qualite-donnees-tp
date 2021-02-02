@@ -35,11 +35,11 @@ class Cursor(object):
         self.txt.set_position((0,self.j-(3*self.i)-2))
         self.ax.figure.canvas.draw_idle()
 
-def generate_year(file):
+def get_plot_from_dataframe(file):
     year = transpose(genfromtxt(file, delimiter=';', dtype=float, skip_header=True)).flatten()
     return year[~isnan(year)]
 
-def generate_ui(years, files_name):
+def generate_graph(years, files_name):
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)
     
@@ -64,5 +64,5 @@ def generate_ui(years, files_name):
     plt.legend()
     plt.show()
 
-years = [generate_year(file) for file in files]
-generate_ui(years, files_name)
+years = [get_plot_from_dataframe(file) for file in files]
+generate_graph(years, files_name)

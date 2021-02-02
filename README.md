@@ -28,7 +28,7 @@ Exécution du programme avec les données non conformes
 python3 App/app.py
 ```
 
-Exécution du programme avec les données non conformes
+Exécution du programme afin de comparer les graphiques
 ```sh
 python3 compare_data.py --csv Data/Climat.csv,Data/Savukoski.csv,Data/Moscow.csv
 ```

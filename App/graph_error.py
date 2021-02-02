@@ -28,7 +28,7 @@ class Cursor(object):
         self.txt.set_position((x+1,y+1))
         self.ax.figure.canvas.draw()
 
-def getPlotFromDataFrame(months, climat, mean, std, minli, maxli, minyear, maxyear):    
+def get_plot_from_dataframe(months, climat, mean, std, minli, maxli, minyear, maxyear):    
     year_array = array([])
     for i, month in enumerate(months, start=0):
         year_array = append(year_array, climat[:, i])
