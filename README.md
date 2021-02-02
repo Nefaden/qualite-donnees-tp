@@ -55,9 +55,11 @@ Les résultats obtenus sont sensiblement identique. Il y a des écarts (max aoû
 
 ### A	partir	de	données	opendata	du	second	fichier,	retrouver	le	type	de	climat
 
-Ces données proviennent de Finlande, où règne un climat froid, voir tempéré mais avec de grands écarts observable entre les période estivale et hivernale.
+D'après le fichier donné en complément provenant de Savukosi kirkonkyla, station Finlandaise, il y règne un climat froid, voir tempéré mais avec de grands écarts observable entre les période estivale et hivernale.
 
 ### reprendre	les	données	typiques	de	la	localisaon	proche		fournies	en	complément	,	comparer	les	écarts.
+
+#### Méthode
 
 L'objectif est d'extraire les données d'une ville européenne, effectuer le traitement comme pour les données que l'ont possède et y opérer un ratio sur chacune des données pour vérifier la corrélation. 
 * De 0 à 0,5, les données ne sont pas corrélé,
@@ -67,7 +69,12 @@ L'objectif est d'extraire les données d'une ville européenne, effectuer le tra
 
 Il serait aussi envisageable d'effectuer la différence entre les valeurs lue à chaque X, ou même effectuer la différence des aires entre les deux courbes superposées, afin d'éviter une estimation de corrélation "validé" alors que visuellement, les courbes se croisent et sont en miroir, ce qui en ferait des courbes absolument pas identique.
 
-#### Méthode
+### Qu'en	concluez	vous	?
+
+
+### De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
+
+L'objectif est d'extraire les données d'une ville européenne, effectuer le traitement comme pour les données que l'ont possède et y opérer un ratio sur chacune des données pour vérifier la corrélation. 
 
 Afin d'estimer d'où proviennent les données, nous avons utilisé deux sites :
 * https://nomadlist.com/climat-finder
@@ -77,7 +84,6 @@ Afin d'estimer d'où proviennent les données, nous avons utilisé deux sites :
 Nous avons d'abord comparer visuellement les moyennes de températures avec des villes de régions du monde cohérente avec celles que nous possèdons. Via le site nomadlist nous avons pu trouver une ville qui correspond plus ou moins à nos données, en se basant sur une recherche à partir des valeur maximale et minimale sur un mois car à l'année, les écartes étaient trop grand et ne permettait pas un filtre optimisé. 
 
 Le second site nous a permis d'obtenir les données sous format csv et donc permettre la comparaison expliciter plus haut.
-### Qu'en	concluez	vous	?
 
 Actuellement nous pensons qu'il s'agit d'une de ces villes parmis :
 * Moscou
@@ -86,9 +92,13 @@ Actuellement nous pensons qu'il s'agit d'une de ces villes parmis :
 ![yekaterinburg](/Data/screenshots/Yekaterinburg.png)
 * Izhevsk
 ![izhevsk](/Data/screenshots/izhevsk.png)
+NB: Ces données sont certainement basé sur l'année 2020, il se peut donc que le climat entre 2018 et 2020 ait pu changer dans ces villes, faussant par la même occasion nos observations.
 
+Cependant, seule Moscou est présent dans le fichier en provenance de Kaggle.
 
-### De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
+Nous avons donc créer un nouveau fichier csv à partir du csv de kaggle pour n'avoir que Moscou sur l'année 2018 (le fichier en provenance de Savukosi kirkonkyla affiche des données dantant de 2018).
+
+Lors de la création du fichier, nous avons remarqué des données incohérente voir abérrante. Il semblerait que le fichier kaggle nous affiches des données en Fahrenheit, nous avons donc du créer une fonction pour les convertir en celsius.
 
 ## Author
 
