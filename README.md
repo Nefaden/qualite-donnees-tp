@@ -28,6 +28,11 @@ Exécution du programme avec les données non conformes
 python3 App/app.py
 ```
 
+Exécution du programme avec les données non conformes
+```sh
+python3 compare_data.py --csv Data/Climat.csv,Data/Savukoski.csv,Data/Moscow.csv
+```
+
 ## Question du TP
 
 Les premières questions, celles sur le calcul de statistiques et affichage des données via des courbes et un cursor mobile sont inclus dans les fichiers main.py et graph.py situer à la racine.
