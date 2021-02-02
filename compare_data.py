@@ -43,9 +43,9 @@ def generate_graph(years, files_name):
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)
     
-    plt.title(f"Comparaison")
+    plt.title(f"Comparaison des données")
     plt.xlabel('Jours')
-    plt.ylabel('Degré')
+    plt.ylabel('Température')
     
     min_temp = nanmin(years)
     max_temp = nanmax(years)
