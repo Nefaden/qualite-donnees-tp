@@ -31,14 +31,27 @@ def statistics(dataframe):
     print('\n')
     print("Température minimale de l'année : " + str(minyear[0]))
     print("Température maximale de l'année : " + str(maxyear[0]))
-
+   
 def clean_data(dataframe):
     avg_month = nanmean(dataframe, axis=0)
     for i, avg_month in enumerate(avg_month, start=0):
         for j in range(len(dataframe)):
-                if math.isnan(dataframe[j][i]):
+            if math.isnan(dataframe[j][i]):
+                if j < 28:
                     dataframe[j][i] = round(avg_month)
+            else:
+                if 0 < j < 30:
+                    if verif_data(dataframe[j - 1][i], dataframe[j][i], dataframe[j + 1][i]):
+                        dataframe[j][i] = round(avg_month)
     np.savetxt("../Data/Climat_cleaned.csv", dataframe, delimiter=";")
+
+def verif_data(prev, data, next):
+    moyenne = (prev + next) / 2
+    if data > (moyenne + 7) or data < (moyenne - 7):
+        return True
+    return False
+
+    np.savetxt("../Data/Climat_cleaned.csv", dataframe, delimiter=";")	
 
 def calcul_rolling_mean(dataframe):
     df = pd.DataFrame(dataframe)
