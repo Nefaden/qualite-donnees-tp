@@ -81,12 +81,12 @@ Le second site nous a permis d'obtenir les données sous format csv et donc perm
 
 Actuellement nous pensons qu'il s'agit d'une de ces villes parmis :
 * Moscou
-* Yekaterinburg
-* Izhevsk
-
 ![moscow](/Data/screenshots/moscow.png)
+* Yekaterinburg
 ![yekaterinburg](/Data/screenshots/yekaterinburg.png)
+* Izhevsk
 ![izhevsk](/Data/screenshots/izhevsk.png)
+
 
 ### De	quelle	la	capitale	européenne	avez	vous		eu	les	données.
 
